@@ -17,6 +17,6 @@ dependencies:
 - tk=8.6.10=hb0a8c7a_0
 - wheel=0.36.2=pyhd3eb1b0_0
 - xz=5.2.5=h1de35cc_0
-- zlib=1.2.11=h1de35cc_3
+- zlib=1.2.11
 prefix: /Users/anna/anaconda3/envs/ourenvironment
 
