@@ -39,4 +39,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run random number script
         run: |
-          conda run -n actions-mwe python random_number.py
+          conda run -n ourenvironment python random_number.py
