@@ -25,10 +25,17 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
+      # Download Miniconda
+      - name: Download and Install Miniconda
+        run: |
+          wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+          bash ~/miniconda.sh -b
+          export PATH=~/miniconda3/bin:$PATH
+          conda update --yes conda
+      - name: Create Conda Environment
+        run: |
+          conda env create -f environment2.yml
+          
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
